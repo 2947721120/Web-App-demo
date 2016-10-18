@@ -7,24 +7,24 @@ local_js_files: ['optional_relative_path.js', 'anotheroptional_relative_path.js'
 additional_head_content: <meta name="optional" value="optional">
 ---
 
-<h3>Background</h3>
-<p>Background info goes here.</p>
-<p>Any content here, outside of a capture block, is included verbatim on the resulting page.</p>
+<h3>背景</h3>
+<p>背景信息到这里.</p>
+<p>这里的任何内容，一个捕获块外，包括逐字在结果页.</p>
 
 {% capture initial_output_content %}
-<p>This optional capture/include can be used to set initial sample output.</p>
+<p>该可选捕获/包括可用于设置初始样本输出.</p>
 {% endcapture %}
 {% include output_helper.html initial_output_content=initial_output_content %}
 
 /*
-  Use this optional include for any JavaScript that shows off the feature's functionality.
-  Do not surround it with &lt;script&gt; tags.
-  If output_helper.html is included on this page, then ChromeSamples.log(),
-  ChromeSamples.clearLog(), ChromeSamples.setStatus(), and ChromeSamples.setContent() can be used.
+  使用此可选包括，显示了该功能的功能的任何JavaScript.
+  不要用环绕它 &lt;script&gt; tags.
+  如果output_helper.html包含此页面，然后在 ChromeSamples.log(),
+  ChromeSamples.clearLog(), ChromeSamples.setStatus(), 和 ChromeSamples.setContent() 可以使用.
 */
 {% include js_snippet.html filename='demo.js' %}
 
 {% capture css %}
-/* Use this optional capture/include for CSS that shows off the feature's functionality. */
+/* 使用此可选的捕获/包括CSS，显示了该功能的功能. */
 {% endcapture %}
 {% include css_snippet.html css=css %}
